@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fancy weather</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- link font Montserrat -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <!-- mapboxmap -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
+    <!-- owfont -->
+    <link rel="stylesheet" href="owfont/css/owfont-regular.min.css">
+</head>
+<body class="page">
+    <div class="control">
+        <button class="control__refresh">
+            <i class="fas fa-sync"></i>
+        </button>
+        <div class="control__dropdown">
+            <button class="control__language">
+                <span class="control__current-language"></span>
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="control__dropdown-content">
+                <button class="control__dropdown-item control__dropdown-item_en">EN</button>
+                <button class="control__dropdown-item control__dropdown-item_ru">RU</button>
+            </div>
+        </div>
+        <div class="control__units">
+            <button class="control__fahrenheit-units">°F</button>
+            <button class="control__celsius-units">°C</button>
+        </div>
+        <div class="control__search">
+            <input type="text" class="control__input-city" placeholder="Search city or ZIP">
+            <button class="control__voice-input"><i class="fas fa-microphone"></i></button>
+            <button class="control__search-button">Search</button>
+        </div>
+    </div>
+    <div class="weather">
+        <div class="weather__title">
+            <h2 class="weather__current-location"></h2>
+            <h3 class="weather__current-time"></h3>
+        </div>
+        <div class="weather__today">
+            <span class="weather__degrees weather__degrees_today"></span>
+            <i class="owf owf-5x weather__icon weather__icon_today"></i>
+            <div class="weather__info">
+                <span class="weather__type"></span>
+                <span class="weather__feels-like"></span>
+                <span class="weather__wind"></span>
+                <span class="weather__humidity"></span>
+            </div>
+        </div>
+        <div class="weather__days">
+            <div class="weather__day">
+                <h3 class="weather__day-title"></h3>
+                <span class="weather__degrees"></span>
+                <i class="owf owf-5x weather__icon"></i>
+            </div>
+            <div class="weather__day">
+                <h3 class="weather__day-title"></h3>
+                <span class="weather__degrees"></span>
+                <i class="owf owf-5x weather__icon"></i>
+            </div>
+            <div class="weather__day">
+                <h3 class="weather__day-title"></h3>
+                <span class="weather__degrees"></span>
+                <i class="owf owf-5x weather__icon"></i>
+            </div>
+        </div>
+    </div>
+    <div class="map">
+        <div class="map__map" id="map"></div>
+        <h4 class="map__latitude"></h4>
+        <h4 class="map__longitude"></h4>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
